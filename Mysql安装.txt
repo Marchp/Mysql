@@ -1,0 +1,27 @@
+5.6版本之前，data文件安装时已经存在；5.7版本data文件需要自行创建：
+以管理员身份运行cmd，进入Mysql文件的bin目录
+——>mysqld install
+安装mysql
+——>mysql--intitialize-insecure--user=mysql
+创建data数据文件夹
+——>net start mysql
+启动服务
+
+登录命令以及常用的几个参数：
+——>mysql -u root -p
+然后会提示输入密码，首次登录密码为空，用户root
+——>mysql -h 主机地址 -u 用户名-p 用户密码
+——>mysql -u 用户名 -p密码(-p与密码无空格)        这种方式并不安全，密码会直接显示
+—D 打开指定数据库
+—P 端口号
+—p 密码
+—h 服务器名称
+—prompt 提示符
+—u 用户名
+—V 输出版本信息并exit
+
+Mysql服务启动、停止、卸载：
+启动：net start Mysql；
+停止：net stop Mysql；
+卸载：sc delete Mysql；
+

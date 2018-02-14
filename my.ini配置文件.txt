@@ -1,0 +1,15 @@
+my.ini配置文件:
+default-character-set=utf8 
+设置mysql客户端默认的字符集
+port=3306
+设置端口号
+basedir=、、、、、、
+basedir设置mysql的安装目录，例如：F:\Mysql\Mysql\mysql-5.7.20-winx64
+datadir=、、、、、、
+datadir设置数据的存放目录，例如：F:\Mysql\Mysql\mysql-5.7.20-winx64\data
+max-connection=200
+允许最大连接数
+character-set-server=utf8
+服务端设置成8bit编码的latinl字符
+default-storage-ergine=INNODB
+创建新表时将使用的默认存储引擎

@@ -1,0 +1,25 @@
+1、修改密码
+三种方式：
+<1> SET PASSWORD FOR 'root'@'localhost'=PASSWORD('新密码')
+这是已经进入mysql数据库以后才能进行的操作
+<2>mysqladmin -u root -p password 密码
+然后会提示输入旧密码，完后使用新的密码重新登录，这是发生在登入mysql时的修改方式
+<3>首先登入mysql；
+——>use mysql;
+——>UPDATE mysql.user SET authentication_string =PASSWORD('密码') WHERE User='root';
+——>flush privileges;
+flush privileges 刷新mysql的系统权限相关表使得修改密码生效
+
+2、常用基础命令
+exit；退出mysql并关闭命令界面
+quit；退出mysql
+\q； 退出
+SELECT VERSION();显示当前mysql版本
+SELECT NOW(); 显示当前日期时间
+SELECT USER(); 显示当前用户
+
+3、mysql语句规则
+关键字、函数名称全部大写；
+数据库名称、表名称、字段名称全部小写；
+必须以分号结尾；
+
